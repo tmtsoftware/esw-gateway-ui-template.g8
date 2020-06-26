@@ -1,12 +1,13 @@
 {
-  "name": "esw-ts-example",
-  "version": "1.0.0",
+  "name": "$project_name$",
+  "version": "$version$",
   "license": "Apache License, Version 2.0",
   "private": true,
   "dependencies": {
     "esw-ts": "^0.1.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
   },
   "scripts": {
     "start": "snowpack dev",
@@ -20,7 +21,7 @@
     "test": "jest",
     "test:coverage": "jest --coverage ",
     "fix": "npm-run-all --parallel clean fix:eslint fix:prettier",
-    "fix:eslint": "eslint --fix --config .eslintrc.js './**/*.{ts,tsx}' --max-warnings 0",
+    "fix:eslint": "eslint --fix --config .eslintrc.js './**/*.{ts,tsx}' --max-warnings 2",
     "fix:prettier": "prettier --write --config ./.prettierrc './**/*.{ts,tsx}' "
   },
   "browserslist": [
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "eslint": "^7.2.0",
@@ -44,7 +46,7 @@
     "typescript": "^3.9.5",
     "prettier": "^2.0.5",
     "ts-jest": "^26.1.0",
-    "npm-run-all": "^4.1.5"
-  },
-  "homepage": "https://github.com/tmtsoftware/esw-ts#readme"
+    "npm-run-all": "^4.1.5",
+    "@testing-library/react": "^10.4.3"
+  }
 }

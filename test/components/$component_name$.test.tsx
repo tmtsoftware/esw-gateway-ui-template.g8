@@ -1,10 +1,10 @@
 import React from 'react'
-import { Component1 } from '../../src/components/Component1'
+import $component_name$ from '../../src/components/$component_name$'
 import { render } from '@testing-library/react'
 
-describe('Component1', () => {
+describe('$component_name$', () => {
   test('should render Component', async () => {
-    const { container } = render(<Component1 />)
+    const { container } = render(<$component_name$ />)
     expect(container).toMatchSnapshot()
   })
 })
