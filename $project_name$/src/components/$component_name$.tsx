@@ -19,5 +19,5 @@ const $component_name$ = () => {
     </div>
   )
 }
-$component_name$.displayName = '$component_name$'
+
 export default $component_name$

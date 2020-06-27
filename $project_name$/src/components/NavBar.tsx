@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import React, { useContext } from 'react'
 import { AuthContext, Logout, Login } from 'esw-ts'
 
-const NavComponent = () => {
+const NavBar = () => {
   const { auth } = useContext(AuthContext)
 
   return (
@@ -15,8 +15,9 @@ const NavComponent = () => {
           <li>
             <Link to='/$component_name$'> $component_name$ </Link>
           </li>
+          $if(auth_needed.truthy)$
           <li>
-            {!auth ? (
+            {!auth  ? (
               <span>Loading...</span>
             ) : auth.isAuthenticated() ? (
               <Logout />
@@ -24,10 +25,11 @@ const NavComponent = () => {
               <Login />
             )}
           </li>
+          $endif$
         </ul>
       </div>
     </nav>
   )
 }
 
-export default NavComponent
+export default NavBar
