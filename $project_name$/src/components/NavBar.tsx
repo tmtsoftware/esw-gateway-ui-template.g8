@@ -6,16 +6,15 @@ const NavBar = () => {
   const { auth } = useContext(AuthContext)
 
   return (
-    <nav className='indigo'>
-      <div className='nav-wrapper'>
+    <nav>
+      <div>
         <a href='https://www.tmt.org/' className='brand-logo'>
           TMT
         </a>
-        <ul className='right'>
+        <ul>
           <li>
-            <Link to='/$component_name$'> $component_name$ </Link>
+            <Link to='/SampleGUI'> SampleGUI </Link>
           </li>
-          $if(auth_needed.truthy)$
           <li>
             {!auth  ? (
               <span>Loading...</span>
@@ -25,7 +24,6 @@ const NavBar = () => {
               <Login />
             )}
           </li>
-          $endif$
         </ul>
       </div>
     </nav>
