@@ -2,13 +2,13 @@
 
 ### Install Giter8 cli locally using any one of the following ways
 Using Coursier 
-> $> cs foundweekends/giter8 
+> cs foundweekends/giter8 
 
 Using Curl 
-> $> curl https://raw.githubusercontent.com/foundweekends/conscript/master/setup.sh | sh
+> curl https://raw.githubusercontent.com/foundweekends/conscript/master/setup.sh | sh
 
 Using Brew 
-> $> brew update && brew install giter8 
+> brew update && brew install giter8 
 
 ____
 To check gitter is installed on machine. try running following command on terminal  
