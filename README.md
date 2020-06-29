@@ -38,7 +38,7 @@ Available agruments
 For ex: 
 > g8 --project_name=SequencerUI tmtsoftware/esw-ui-template.g8
 
-Default values will be used for remaingin arguments.
+Default values will be used for remaining arguments.
 
 
 
