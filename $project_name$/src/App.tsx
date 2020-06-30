@@ -1,10 +1,10 @@
 import React from 'react'
-import SampleGUI from './components/SampleGUI'
+import Landing from './components/Landing'
 import './public/assets/css/App.css'
 
 const App = () => (
   <div className='App'>
-    <SampleGUI />
+    <Landing />
   </div>
 )
 

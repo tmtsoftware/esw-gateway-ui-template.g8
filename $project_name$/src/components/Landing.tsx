@@ -1,7 +1,7 @@
 import React from "react";
 import icon from "../public/assets/images/tmt_favicon.ico";
 
-const SampleGUI = () => {
+const Landing = () => {
   return (
     <div>
       <img className="icon" src={icon} />
@@ -18,4 +18,4 @@ const SampleGUI = () => {
   );
 };
 
-export default SampleGUI;
+export default Landing;
