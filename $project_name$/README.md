@@ -1,16 +1,22 @@
 # $project_name$
 
-## Before running
-update esw-ts, react, react-dom path in package.json before npm install
-
-```package.json
-{
-   dependencies : {
-       "esw-ts": "<local-path-to-esw-ts>/lib",
-       "react": "<local-path-to-esw-ts>/lib/node_modules/react",
-       "react-dom": "<local-path-to-esw-ts>/lib/node_modules/react-dom"
-   } 
-}
+## Prerequisite until we publish esw-ts to npm
 ```
-## To run locally 
-`npm start`
+ $> cd ~/projects/esw-ts/lib
+ $> npm run build
+```
+
+## link the above esw-ts build library to the newly created webapp using g8
+```
+$> g8 tmtsoftware/esw-ui-template.g8
+$> cd project-name
+$> npm link <path-to-local-esw-ts-library> (/~/projects/esw-ts/lib)
+```
+
+
+## Steps to run in local environment
+```
+ $> npm install
+
+ $> npm start
+```

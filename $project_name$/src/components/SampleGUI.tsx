@@ -1,23 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React from "react";
+import icon from "../public/assets/images/tmt_favicon.ico";
 
 const SampleGUI = () => {
-  const [backendProxyUrl, setbackendProxyUrl] = useState<string>('')
-  useEffect(() => {
-    // Make sure that the backend to which this app is going to communicate is up and running
-    // then uncomment the following lines
-    // const serverUri = resolveServerHost()
-    // setbackendProxyUrl(serverUri)
-  }, [])
-
   return (
     <div>
-      <h5>
-        Please refer{' '}
-        <a href='https://github.com/tmtsoftware/esw-ts'> esw-ts </a>{' '}
-        documentation for appropriate usage of esw-ts library.
-      </h5>
+      <img className="icon" src={icon} />
+      <h3>Update src/App.tsx and save to reload.</h3>
+      <h3>
+        Refer esw-ts library usage from <a
+          className="link"
+          href="https://github.com/tmtsoftware/esw-ts"
+        >
+          here.
+        </a>
+      </h3>
     </div>
-  )
-}
+  );
+};
 
-export default SampleGUI
+export default SampleGUI;

@@ -2,10 +2,7 @@
 
 ### Install Giter8 cli locally using any one of the following ways
 Using Coursier 
-> cs foundweekends/giter8 
-
-Using Curl 
-> curl https://raw.githubusercontent.com/foundweekends/conscript/master/setup.sh | sh
+> cs install giter8 
 
 Using Brew 
 > brew update && brew install giter8 

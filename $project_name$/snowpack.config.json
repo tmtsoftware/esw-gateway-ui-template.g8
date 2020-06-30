@@ -1,6 +1,6 @@
 {
   "devOptions": {
-    "fallback": "index.html",
+    "fallback": "./src/public/index.html",
     "port": 3000,
     "bundle": false
   }
