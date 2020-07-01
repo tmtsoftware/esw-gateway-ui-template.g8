@@ -1,5 +1,5 @@
 import React from 'react'
-import SampleGUI from '../../src/components/SampleGUI'
+import Landing from '../../../src/components/Landing'
 import { render } from '@testing-library/react'
 
 describe('Landing', () => {

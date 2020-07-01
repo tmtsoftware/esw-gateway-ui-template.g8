@@ -1,10 +1,11 @@
 import React from "react";
-import icon from "../public/assets/images/tmt_favicon.ico";
+import logo from "../../assets/images/tmt_logo.png";
+import './Landing.css'
 
 const Landing = () => {
   return (
     <div>
-      <img className="icon" src={icon} />
+      <img className="logo" src={logo} />
       <h3>Update src/App.tsx and save to reload.</h3>
       <h3>
         Refer esw-ts library usage from <a

@@ -2,16 +2,15 @@
   "compilerOptions": {
     "declaration": true,
     "target": "ESNext",
-    "module": "ES6",
+    "module": "ESNEXT",
     "allowJs": true,
     "checkJs": true,
     "outDir": "./dist",
     "rootDir": ".",
     "moduleResolution": "node",
-    "lib": ["ESNEXT", "DOM", "DOM.Iterable"],
     "resolveJsonModule": true,
     "strict": true,
-    "baseUrl": "src",
+    "baseUrl": "./",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "noUnusedParameters": true,
@@ -23,6 +22,6 @@
     "jsx": "react",
     "noEmit": true
   },
-  "include": ["src/**/*"],
+  "include": ["src", "types"],
   "exclude": ["node_modules", "dist"]
 }

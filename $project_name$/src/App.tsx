@@ -1,6 +1,6 @@
 import React from 'react'
-import Landing from './components/Landing'
-import './public/assets/css/App.css'
+import { Landing } from './components'
+import './App.css'
 
 const App = () => (
   <div className='App'>
@@ -9,4 +9,3 @@ const App = () => (
 )
 
 export default App
-
