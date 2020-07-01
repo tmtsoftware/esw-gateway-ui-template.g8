@@ -11,7 +11,7 @@
     "start": "snowpack dev",
     "build": "snowpack build",
     "clean": "rm -rf dist && mkdir dist",
-    "prebuild": "npm-run-all --parallel clean audit fix",
+    "prebuild": "npm-run-all --parallel clean fix",
     "test": "jest",
     "test:coverage": "jest --coverage ",
     "fix": "npm-run-all --parallel clean fix:eslint fix:prettier",
