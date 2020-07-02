@@ -2,7 +2,7 @@
 
 .App {
   text-align: center;
-  background-color: rgb(20, 22, 49);
+  background-color: #141631;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
