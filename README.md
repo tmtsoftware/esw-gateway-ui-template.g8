@@ -51,6 +51,4 @@ __________
 > g8 tmtsoftware/esw-ui-template.g8 --project_name=demo-app
 > cd demo-app
 > npm link <path-to-local-esw-ts-library> (/~/projects/esw-ts/lib)
-> npm install
-> npm start
 ```
