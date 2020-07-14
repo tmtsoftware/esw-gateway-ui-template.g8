@@ -4,11 +4,11 @@
   "license": "Apache License, Version 2.0",
   "private": true,
   "dependencies": {
+    "esw-ts": "^0.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "scripts": {
-    "esw-ts": "^0.1.0",
     "start": "snowpack dev",
     "build": "snowpack build",
     "clean": "rm -rf dist && mkdir dist",
