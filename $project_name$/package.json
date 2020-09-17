@@ -16,7 +16,7 @@
     "test": "jest",
     "test:coverage": "jest --coverage ",
     "fix": "npm-run-all --parallel clean fix:eslint fix:prettier",
-    "fix:eslint": "eslint --fix --config .eslintrc.js './**/*.{ts,tsx}' --max-warnings 2",
+    "fix:eslint": "eslint --fix --config .eslintrc.js './**/*.{ts,tsx}'",
     "fix:prettier": "prettier --write --config ./.prettierrc './**/*.{ts,tsx}' "
   },
   "browserslist": [
