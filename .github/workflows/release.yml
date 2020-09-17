@@ -47,12 +47,12 @@ jobs:
           # `releasing.md`. <****> should be changed to appropriate version of this g8 template agaist which
           # release sanity workflow will run
         run: |
-            g8 tmtsoftware/esw-ui-template.g8 --tag <****> --name=ui-app
+            g8 tmtsoftware/esw-ui-template.g8 --tag <****> --project_name=ui-app
 
       - name: Build - UI app
         working-directory: ./ui-app
         run: |
-            npm ci
+            npm install
             npm run build
             npm run test
 
