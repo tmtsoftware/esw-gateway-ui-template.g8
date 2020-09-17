@@ -51,7 +51,7 @@ jobs:
       - name: Build - UI app
         working-directory: ./ui-app
         run: |
-            npm ci
+            npm install
             npm run build
             npm run test
 
