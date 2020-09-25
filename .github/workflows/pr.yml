@@ -1,12 +1,11 @@
-name: release sanity
+name: ci for master
 
 on:
-  push:
-    tags:
-      - "v*"
+  pull_request:
+    branches: [master]
 
 jobs:
-  g8:
+  PR:
     runs-on: ubuntu-latest
 
     steps:
@@ -42,12 +41,11 @@ jobs:
             cd /usr/local/bin
             chmod +x g8
 
-      - name: create new project from esw-ui-template.g8 template with specified version
-          # This task is being referred in `releasing.md`. If you change this task make appropriate changes in
-          # `releasing.md`. <****> should be changed to appropriate version of this g8 template agaist which
-          # release sanity workflow will run
+      - name: create new project from esw-ui-template.g8 template
         run: |
-            g8 tmtsoftware/esw-ui-template.g8 --tag v0.1.0-M1 --project_name=ui-app
+            echo("Running PR build for branch mentioned below")
+            echo ${GITHUB_HEAD_REF}
+            g8 tmtsoftware/esw-ui-template.g8 --branch ${GITHUB_HEAD_REF} --project_name=ui-app
 
       - name: Build - UI app
         working-directory: ./ui-app
@@ -55,12 +53,3 @@ jobs:
             npm install
             npm run build
             npm run test
-
-      - name: Notify slack
-        if: always()
-        continue-on-error: true
-        uses: kpritam/slack-job-status-action@v1
-        with:
-          job-status: ${{ job.status }}
-          slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
-          channel: ci-release
