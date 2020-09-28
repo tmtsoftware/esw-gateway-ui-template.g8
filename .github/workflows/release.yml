@@ -47,7 +47,7 @@ jobs:
           # `releasing.md`. <****> should be changed to appropriate version of this g8 template agaist which
           # release sanity workflow will run
         run: |
-            g8 tmtsoftware/esw-ui-template.g8 --tag v0.1.0-M1 --project_name=ui-app
+            g8 tmtsoftware/esw-ui-template.g8 --tag <****> --project_name=ui-app
 
       - name: Build - UI app
         working-directory: ./ui-app
