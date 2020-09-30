@@ -2,7 +2,7 @@
 
 Steps to release:
 
-1. Change `esw-ts` version in `src/main/g8/default.properties` and `README.md`
+1. Change `esw-ts` version in `default.properties` and `README.md`
 2. Make sure `dev` workflow is green in actions tab in github repo
 3. update `release.yml`
     Update step `create new project from esw-ui-template.g8 template with specified version` in `release.yml`
