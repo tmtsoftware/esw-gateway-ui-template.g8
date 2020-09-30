@@ -14,4 +14,4 @@ Steps to release:
 4. Run ./release.sh <VERSION> script by providing version number argument
     **Note:** `PROD=true` environment variable needs to be set before running `release.sh`
 
-5. Tagging csw.g8 will trigger `release` workflow in github actions tab. Make sure that `release` workflow is green.
+5. Tagging esw-ui-template.g8 will trigger `release` workflow in github actions tab. Make sure that `release` workflow is green.
