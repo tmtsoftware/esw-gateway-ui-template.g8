@@ -5,7 +5,7 @@ The generated project contains a sample web application which includes following
 
 - Landing page
 - Mandatory dependencies like esw-ts library.
-- Unit tests
+- Unit test setup
 
 ## Getting Started
 
