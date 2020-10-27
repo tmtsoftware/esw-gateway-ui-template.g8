@@ -10,7 +10,7 @@ The generated project contains a sample web application which includes following
 ## Getting Started
 
 ### Install Coursier
-Please follow the [coursier installation](https://get-coursier.io/docs/cli-installation).
+Please follow the [coursier installation](https://get-coursier.io/docs/cli-installation) steps.
 
 ### Install Giter8
 
