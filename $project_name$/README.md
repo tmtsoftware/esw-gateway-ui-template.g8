@@ -51,4 +51,5 @@ The project has following structure:
 
 
 ## References
+- ESW-TS library - [Link](https://tmtsoftware/esw-ts/)
 - Documentation of ESW-TS library - [Link](https://tmtsoftware.github.io/esw-ts/)
