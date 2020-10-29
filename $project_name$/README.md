@@ -1,20 +1,20 @@
 # $project_name$
-This project is a sample web application.
+This project is a sample React web application.
 
-## Prerequisites required for running App
+## Prerequisites Required for Running App
 
-1. Install latest version of [Node.js](https://nodejs.org/en/download/package-manager/)
+The latest version of [Node.js](https://nodejs.org/en/download/package-manager/) must be installed.
 
-## Run the App in local environment
+## Run the App in Local Environment
 
-1. Run following commands in the terminal.
+Run following commands in the terminal.
    ```
    npm install
    npm start
    ```
-2. Go to http://localhost:8080 in the browser
+Then, open http://localhost:8080 in a browser
 
-## Build the App for production
+## Build the App for Production
 
 Run following commands in the terminal.
 ```
@@ -22,13 +22,13 @@ npm install
 npm run build
 ```
 
-## Running tests
+## Running Tests
 
 ```
 npm test
 ```
 
-## How to use the project
+## How to Use the Project
 
 The project has following structure:
 ```bash
@@ -51,5 +51,5 @@ The project has following structure:
 
 
 ## References
-- ESW-TS library - [Link](https://tmtsoftware/esw-ts/)
-- Documentation of ESW-TS library - [Link](https://tmtsoftware.github.io/esw-ts/)
+- ESW-TS Library - [Link](https://tmtsoftware/esw-ts/)
+- ESW-TS Library Documentation - [Link](https://tmtsoftware.github.io/esw-ts/)
