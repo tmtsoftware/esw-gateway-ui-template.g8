@@ -9,7 +9,6 @@ The generated project contains a sample web application which includes following
 
 ## Getting Started
 
-### Install Coursier
 Please follow the [coursier installation](https://get-coursier.io/docs/cli-installation) steps.
 
 ### Install Giter8
@@ -21,6 +20,7 @@ Please follow the [coursier installation](https://get-coursier.io/docs/cli-insta
 `g8 tmtsoftware/esw-ui-template.g8`
 
 This template will prompt for the following parameters. Press Enter to accept the default values, shown in brackets:
+
 - `project_name`: The name of the project.
 - `version`: The version for the project.
 - `author_name`: The author name of the project.
