@@ -9,7 +9,7 @@ const Landing = (): JSX.Element => {
       <h3>Update src/App.tsx and save to reload.</h3>
 
       <h3>
-        Refer esw-ts library usage from{' '}
+        Refer ESW-TS library usage from{' '}
         <a className='link' href='https://github.com/tmtsoftware/esw-ts'>
           here.
         </a>

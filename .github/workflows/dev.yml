@@ -1,11 +1,10 @@
-name: ci for master
+name: dev CI
 
 on:
   push:
-    branches: [master]
-
-  schedule:
-    - cron: "30 18 * * *" # run at 00:00 AM IST
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev ]
 
 jobs:
   g8:
@@ -46,7 +45,8 @@ jobs:
 
       - name: create new project from esw-ui-template.g8 template
         run: |
-            g8 tmtsoftware/esw-ui-template.g8 --project_name=ui-app
+          echo "Running build for branch ${GITHUB_REF#refs/heads/}"
+          g8 tmtsoftware/esw-ui-template.g8 --project_name=ui-app --branch ${GITHUB_REF#refs/heads/}
 
       - name: Build - UI app
         working-directory: ./ui-app
@@ -62,4 +62,4 @@ jobs:
         with:
           job-status: ${{ job.status }}
           slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
-          channel: ci-nightly
+          channel: ci-dev

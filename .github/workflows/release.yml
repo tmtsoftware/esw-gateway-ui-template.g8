@@ -1,9 +1,12 @@
-name: release sanity
+name: release
 
 on:
   push:
     tags:
       - "v*"
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   g8:
@@ -43,11 +46,8 @@ jobs:
             chmod +x g8
 
       - name: create new project from esw-ui-template.g8 template with specified version
-          # This task is being referred in `releasing.md`. If you change this task make appropriate changes in
-          # `releasing.md`. <****> should be changed to appropriate version of this g8 template agaist which
-          # release sanity workflow will run
         run: |
-            g8 tmtsoftware/esw-ui-template.g8 --tag <****> --project_name=ui-app
+            g8 tmtsoftware/esw-ui-template.g8 --project_name=ui-app
 
       - name: Build - UI app
         working-directory: ./ui-app

@@ -4,7 +4,7 @@ This is a Giter8 template for a TMT UI developer which generates a sample web Ap
 The generated project contains a sample web application which includes following:
 
 - Landing page
-- Mandatory dependencies like esw-ts library.
+- Mandatory dependencies like ESW-TS library.
 - Unit test setup
 
 ## Getting Started
@@ -24,6 +24,13 @@ This template will prompt for the following parameters. Press Enter to accept th
 - `project_name`: The name of the project.
 - `version`: The version for the project.
 - `author_name`: The author name of the project.
-- `esw_ts_version`: esw-ts library version used by the project.
 
 Once the project is generated, refer to the project's README for instructions on how to use, build, and run the project.
+
+---
+**NOTE**
+Following section is intended only for testing purpose and can be skipped by the consumers of template.
+
+#### Testing the template
+
+For people interested in testing the template with the latest commit on the master branch, refer [TESTING.md](TESTING.md)
