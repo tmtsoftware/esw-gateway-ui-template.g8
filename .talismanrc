@@ -1,3 +1,0 @@
-fileignoreconfig:
-  - filename: .github/workflows/pr.yml
-    checksum: 54f2c211876359b096c758456986645ffddf45f5961bc9294b82a432ee5abac4
