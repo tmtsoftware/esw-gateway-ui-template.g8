@@ -55,7 +55,7 @@ jobs:
 
       - name: create new project from esw-ui-template.g8 template
         run: |
-          echo "Running build for branch ${GITHUB_REF#refs/heads/}"
+          echo "Running build for branch ${BRANCH_NAME}"
           g8 tmtsoftware/esw-ui-template.g8 --project_name=ui-app --branch ${BRANCH_NAME}
 
       - name: Build - UI app
@@ -65,4 +65,12 @@ jobs:
             npm run build
             npm run test
 
-      
+      - name: Notify slack
+        if: always()
+        continue-on-error: true
+        uses: kpritam/slack-job-status-action@v1
+        with:
+          job-status: ${{ job.status }}
+          slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
+          channel: ci-dev
+
