@@ -4,7 +4,7 @@ on:
   push:
     branches: [ dev ]
   pull_request:
-    branches: [ dev ]
+    branches: [ dev, master ]
 
 jobs:
   g8:
@@ -43,10 +43,20 @@ jobs:
             cd /usr/local/bin
             chmod +x g8
 
+      - name: Extract branch name (Trigger - PR)
+        if: github.event_name == 'pull_request'
+        run: echo "::set-env name=BRANCH_NAME::$(echo ${GITHUB_HEAD_REF})"
+
+      - name: Extract branch name (Trigger - Push)
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: echo "::set-env name=BRANCH_NAME::$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+
       - name: create new project from esw-ui-template.g8 template
         run: |
           echo "Running build for branch ${GITHUB_REF#refs/heads/}"
-          g8 tmtsoftware/esw-ui-template.g8 --project_name=ui-app --branch ${GITHUB_REF#refs/heads/}
+          g8 tmtsoftware/esw-ui-template.g8 --project_name=ui-app --branch ${BRANCH_NAME}
 
       - name: Build - UI app
         working-directory: ./ui-app
