@@ -2,7 +2,8 @@
 
 Steps to release:
 
-1. Change `esw-ts` version in `default.properties` and `README.md`
+1. Change `esw-ts` version in `default.properties`
+1. Commit and push changes to `dev` branch
 1. Make sure `dev` workflow is green in actions tab in github repo
 1. Rebase dev branch with master branch
 1. Merge dev branch to master branch
