@@ -5,12 +5,11 @@ module.exports = {
     'prettier/@typescript-eslint',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
-    'plugin:jest/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript'
   ],
-  plugins: ['@typescript-eslint', 'prettier', 'jest', 'import'],
+  plugins: ['@typescript-eslint', 'prettier', 'import'],
   rules: {
     '@typescript-eslint/explicit-member-accessibility': 0,
     '@typescript-eslint/no-use-before-define': 0,
@@ -18,8 +17,7 @@ module.exports = {
     '@typescript-eslint/camelcase': 0,
     'import/no-absolute-path': 2,
     'import/first': 2,
-    'import/order': 0,
-    'jest/expect-expect': 0
+    'import/order': 0
   },
   settings: {
     'import/resolver': {
