@@ -6,9 +6,10 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@tmtsoftware/esw-ts": "git+https://github.com/tmtsoftware/esw-ts#e6206a5f37205a8115b52da21db980e27be994c1",
+    "@tmtsoftware/esw-ts": "git+https://github.com/tmtsoftware/esw-ts#ad5e51961048ecb0ae99266fa187b7582b29a676",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0"
   },
   "scripts": {
     "start": "snowpack dev",
@@ -30,6 +31,7 @@
     "@types/chai": "^4.2.19",
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.8",
+    "@types/react-router-dom": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",
     "@web/test-runner": "^0.13.12",
