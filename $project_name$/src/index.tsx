@@ -5,7 +5,6 @@ import App from './App'
 import { AppConfig } from './config/AppConfig'
 import './index.css'
 
-
 setAppName(AppConfig.applicationName)
 
 render(<App />, document.getElementById('root'))

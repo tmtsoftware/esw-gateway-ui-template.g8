@@ -1,34 +1,42 @@
+import { AuthContext } from '@tmtsoftware/esw-ts'
 import { Button, Form, Input, Typography } from 'antd'
-import React from 'react'
+import React, { useContext } from 'react'
 import { useLocationService } from '../contexts/LocationServiceContext'
-import { greetUser, showError } from '../helpers/HttpUtils'
+import { greetUser, securedGreetUser, showError } from '../helpers/HttpUtils'
 import { resolveBackendUrl } from '../helpers/resolveBackend'
-import type { GreetResponse, UserInfoRequest } from '../models/Models'
+import type { UserInfoRequest } from '../models/Models'
 import styles from './UserForm.module.css'
 
 const UserForm = ({
-  onSubmitHandler
+  onSubmitHandler,
+  isSecured = false
 }: {
   onSubmitHandler: (message: string) => void
-}) => {
+  isSecured?: boolean
+}): JSX.Element => {
   const locationService = useLocationService()
+  const { auth } = useContext(AuthContext)
 
-  const onFinish = (values: UserInfoRequest) => {
-    console.log('In here form')
-    resolveBackendUrl(locationService)
-      .then((loc) => {
-        loc &&
-          greetUser(loc.uri, values).then((response: GreetResponse) =>
-            onSubmitHandler(response.msg)
-          )
-      })
-      .catch((e) => {
-        console.log('Error occurred')
-        showError(
-          `Failed to greet user: ${values.firstname} ${values.lastname}`,
-          e
-        )
-      })
+  const onFinish = async (values: UserInfoRequest) => {
+    const backendLocation = await resolveBackendUrl(locationService)
+    if (backendLocation === undefined) {
+      showError(
+        `Failed to greet user: \${values.firstname} \${values.lastname}`,
+        new Error('Not able to resolve backend')
+      )
+      return
+    }
+    if (isSecured) {
+      const response = await securedGreetUser(
+        backendLocation.uri,
+        values,
+        auth?.token()
+      )
+      onSubmitHandler(response[0].msg)
+    } else {
+      const response = await greetUser(backendLocation.uri, values)
+      onSubmitHandler(response.msg)
+    }
   }
 
   const layout = {
@@ -49,18 +57,18 @@ const UserForm = ({
           label='FirstName'
           name='firstname'
           rules={[{ required: true, message: 'Please enter your firstname!' }]}>
-          <Input />
+          <Input role='FirstName' />
         </Form.Item>
 
         <Form.Item
           label='LastName'
           name='lastname'
           rules={[{ required: true, message: 'Please enter your lastname!' }]}>
-          <Input />
+          <Input role='LastName' />
         </Form.Item>
 
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-          <Button type='primary' htmlType='submit'>
+          <Button type='primary' htmlType='submit' role='Submit'>
             Submit
           </Button>
         </Form.Item>

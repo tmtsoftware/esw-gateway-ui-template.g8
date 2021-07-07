@@ -8,7 +8,7 @@ import { Routes } from './routes/Routes'
 
 const basename =
   import.meta.env.NODE_ENV === 'production'
-    ? `/${AppConfig.applicationName}`
+    ? AppConfig.applicationName
     : 'sample'
 
 const App = (): JSX.Element => {
@@ -19,7 +19,7 @@ const App = (): JSX.Element => {
   useEffect(() => {
     LocationService()
       .then((loc) => setLocService(loc))
-      .catch((_) => setError(true))
+      .catch(() => setError(true))
     setLoading(false)
   }, [])
 
@@ -28,7 +28,7 @@ const App = (): JSX.Element => {
       {locService && !loading && (
         <div>
           <LocationServiceProvider locationService={locService}>
-            <Router>
+            <Router basename={basename}>
               <Routes />
             </Router>
           </LocationServiceProvider>

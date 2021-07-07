@@ -1,13 +1,12 @@
-import { ArrowLeftOutlined } from '@ant-design/icons'
-import { Button, Layout, Space, Typography } from 'antd'
+import { Layout, Space, Typography } from 'antd'
 import { Content } from 'antd/lib/layout/layout'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import UserForm from '../form/UserForm'
-import { PageHeader } from '../pageHeader/PageHeader'
-import styles from '../public/GreetUser.module.css'
+import UserForm from './form/UserForm'
+import styles from './GreetUser.module.css'
+import { NavComponent } from './navigation/NavComponent'
+import { PageHeader } from './pageHeader/PageHeader'
 
-export const SecuredGreetUser = (): JSX.Element => {
+export const GreetUser = (): JSX.Element => {
   const [displayMessage, setDisplayMessage] = useState('')
   const onSubmitHandler = (message: string) => {
     setDisplayMessage(message)
@@ -18,18 +17,12 @@ export const SecuredGreetUser = (): JSX.Element => {
       <PageHeader
         title={
           <Typography.Title level={2} style={{ color: 'white' }}>
-            <Space>{'Secured Greeter Application'}</Space>
+            <Space>{'Greeter Application'}</Space>
           </Typography.Title>
         }
         ghost={false}
         className={styles.header1}
-        extra={
-          <>
-            <Link to={'/'}>
-              <Button icon={<ArrowLeftOutlined />}>Back</Button>
-            </Link>
-          </>
-        }
+        extra={<NavComponent />}
       />
       <Layout>
         <Content className={styles.content}>

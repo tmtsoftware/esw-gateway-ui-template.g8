@@ -2,8 +2,8 @@ import { AuthContextProvider, CheckLogin } from '@tmtsoftware/esw-ts'
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import LoginError from '../components/error/LoginError'
-import { GreetUser } from '../components/public/GreetUser'
-import { SecuredGreetUser } from '../components/secured/SecuredGreetUser'
+import { GreetUser } from '../components/GreetUser'
+import { SecuredGreetUser } from '../components/SecuredGreetUser'
 
 export const Routes = (): JSX.Element => {
   return (

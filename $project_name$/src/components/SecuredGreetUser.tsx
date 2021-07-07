@@ -1,12 +1,13 @@
-import { Layout, Space, Typography } from 'antd'
-import { Content, Header } from 'antd/lib/layout/layout'
+import { ArrowLeftOutlined } from '@ant-design/icons'
+import { Button, Layout, Space, Typography } from 'antd'
+import { Content } from 'antd/lib/layout/layout'
 import React, { useState } from 'react'
-import UserForm from '../form/UserForm'
-import { NavComponent } from '../navigation/NavComponent'
-import { PageHeader } from '../pageHeader/PageHeader'
+import { Link } from 'react-router-dom'
+import UserForm from './form/UserForm'
 import styles from './GreetUser.module.css'
+import { PageHeader } from './pageHeader/PageHeader'
 
-export const GreetUser = (): JSX.Element => {
+export const SecuredGreetUser = (): JSX.Element => {
   const [displayMessage, setDisplayMessage] = useState('')
   const onSubmitHandler = (message: string) => {
     setDisplayMessage(message)
@@ -17,16 +18,22 @@ export const GreetUser = (): JSX.Element => {
       <PageHeader
         title={
           <Typography.Title level={2} style={{ color: 'white' }}>
-            <Space>{'Greeter Application'}</Space>
+            <Space>{'Secured Greeter Application'}</Space>
           </Typography.Title>
         }
         ghost={false}
         className={styles.header1}
-        extra={<NavComponent />}
+        extra={
+          <>
+            <Link to={'/'}>
+              <Button icon={<ArrowLeftOutlined />}>Back</Button>
+            </Link>
+          </>
+        }
       />
       <Layout>
         <Content className={styles.content}>
-          <UserForm onSubmitHandler={onSubmitHandler} />
+          <UserForm onSubmitHandler={onSubmitHandler} isSecured />
           {showMessage && <Typography.Text>{displayMessage}</Typography.Text>}
         </Content>
       </Layout>
