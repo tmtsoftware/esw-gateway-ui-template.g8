@@ -15,3 +15,9 @@ target
 **/web_modules/*
 .metals
 .log
+.bloop
+.bsp
+project/.bloop
+project/target
+target
+project/metals.sbt

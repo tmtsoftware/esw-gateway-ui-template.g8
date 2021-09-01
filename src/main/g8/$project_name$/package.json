@@ -6,7 +6,8 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@tmtsoftware/esw-ts": "git+https://github.com/tmtsoftware/esw-ts#ad5e51961048ecb0ae99266fa187b7582b29a676",
+    "@tmtsoftware/esw-ts": "github:tmtsoftware/esw-ts#80c89920ab5ad5d0ae63e95041c1cf85886bb88e",
+    "antd": "4.16.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0"

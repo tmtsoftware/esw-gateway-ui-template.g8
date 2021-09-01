@@ -1,4 +1,3 @@
-/* App wide global css goes in this file  */
 
 .App {
   text-align: center;
@@ -6,8 +5,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  place-content: center;
   font-size: calc(10px + 1.5vmin);
   color: antiquewhite;
 }
