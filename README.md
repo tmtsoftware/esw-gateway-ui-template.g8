@@ -1,9 +1,11 @@
 # Giter8 Frontend template for TMT
 
+NOTE : This template can be used with a step by step [tutorial](https://tmtsoftware.github.io/esw-ui-example/0.1.0-SNAPSHOT/index.html) to reach final [example](https://github.com/tmtsoftware/esw-ui-example) state.
+
 This is a Giter8 template for a TMT UI developer which generates a sample web Application.
 The generated project contains a sample web application which includes following:
 
-- Landing page
+- A Simple Hello world UI
 - Mandatory dependencies like ESW-TS library.
 - Unit test setup
 
