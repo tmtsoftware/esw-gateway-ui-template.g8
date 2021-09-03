@@ -43,9 +43,9 @@ jobs:
             cd /usr/local/bin
             chmod +x g8
 
-      - name: create new project from esw-ui-template.g8 template with specified version
+      - name: create new project from esw-gateway-ui-template.g8 template with specified version
         run: |
-            g8 tmtsoftware/esw-ui-template.g8 --project_name=ui-app
+            g8 tmtsoftware/esw-gateway-ui-template.g8 --project_name=ui-app
 
       - name: Build - UI app
         working-directory: ./ui-app

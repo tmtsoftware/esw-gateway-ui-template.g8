@@ -19,7 +19,7 @@ Please follow the [coursier installation](https://get-coursier.io/docs/cli-insta
 
 ### Create new project using giter8 template
 
-`g8 tmtsoftware/esw-ui-template.g8`
+`g8 tmtsoftware/esw-gateway-ui-template.g8`
 
 This template will prompt for the following parameters. Press Enter to accept the default values, shown in brackets:
 
