@@ -8,9 +8,9 @@ Steps to release:
 1. Rebase dev branch with master branch
 1. Merge dev branch to master branch
 1. Make sure workflow is green in actions tab in github repo for master branch
-1. Run ./release.sh <VERSION> script by providing version number argument
+1. Run ./release.sh `<VERSION>`script by providing version number argument
     **Note:** `PROD=true` environment variable needs to be set before running `release.sh`
 
-2. Tagging esw-gateway-ui-template.g8 will trigger `release` workflow in github actions tab. Make sure that `release` workflow is green
-3. update ESW & CSW version in build.sbt of esw-gateway-ui-example repo.
-4. run `ghpagesPushSite` command.
+1. Tagging esw-gateway-ui-template.g8 will trigger `release` workflow in github actions tab. Make sure that `release` workflow is green
+1. update ESW & CSW version in build.sbt of esw-gateway-ui-example repo.
+1. run `ghpagesPushSite` command.
