@@ -12,5 +12,5 @@ Steps to release:
     **Note:** `PROD=true` environment variable needs to be set before running `release.sh`
 
 1. Tagging esw-gateway-ui-template.g8 will trigger `release` workflow in github actions tab. Make sure that `release` workflow is green
-1. update ESW & CSW version in build.sbt of esw-gateway-ui-example repo.
+1. update ESW & CSW versions in build.sbt & md files of esw-gateway-ui-example repo.
 1. run `ghpagesPushSite` command.
