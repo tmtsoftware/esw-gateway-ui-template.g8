@@ -15,7 +15,7 @@ Run following commands in the terminal.
    npm start
    ```
 
-Then, open [localhost:8080](http://localhost:8080) in a browser
+Then, open [localhost:9000](http://localhost:9000) in a browser
 
 ## Build the App for Production
 
