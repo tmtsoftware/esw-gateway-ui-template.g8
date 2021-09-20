@@ -1,12 +1,5 @@
 .idea
 .vscode
-.talismanrc
-.bsp
-.bloop
-**/.metals/*
-target
-.idea
-.vscode
 target
 dist
 build
@@ -27,4 +20,4 @@ target
 project/.bloop
 project/target
 target
-**/metals.sbt
+project/metals.sbt
