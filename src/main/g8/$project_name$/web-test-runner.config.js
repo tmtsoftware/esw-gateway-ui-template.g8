@@ -1,8 +1,6 @@
-import plugin from '@snowpack/web-test-runner-plugin'
+import vite from 'vite-web-test-runner-plugin'
 
 process.env.NODE_ENV = 'test'
 export default {
-  plugins: [
-    plugin()
-  ]
+  plugins: [vite()]
 }
