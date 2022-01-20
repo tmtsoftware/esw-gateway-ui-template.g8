@@ -9,7 +9,7 @@ ThisBuild / docsRepo := githubRepoUrl
 ThisBuild / docsParentDir := ""
 ThisBuild / gitCurrentRepo := githubRepoUrl
 
-ThisBuild / version := "0.0.1"
+ThisBuild / version := "0.1.0"
 
 lazy val openSite =
   Def.setting {
