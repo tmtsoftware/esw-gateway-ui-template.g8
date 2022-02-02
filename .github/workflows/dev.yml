@@ -15,8 +15,14 @@ jobs:
     
       - uses: actions/setup-node@v1
         with:
-            node-version: "15.x"
+            node-version: "16.x"
             registry-url: "https://registry.npmjs.org"
+
+      - uses: coursier/setup-action@v1.2.0-M2
+        with:
+          jvm: 11
+          apps: sbt sbtn giter8
+      - uses: coursier/cache-action@v5
 
       - name: Cache ~/.npm
         uses: actions/cache@v1
@@ -25,19 +31,6 @@ jobs:
             key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
             restore-keys: |
               ${{ runner.os }}-node-
-
-      - name: Install CS native
-        run: |
-            curl -fLo cs https://git.io/coursier-cli-linux
-            chmod +x cs
-            sudo mv cs /usr/local/bin
-
-      - name: Install giter8
-        run: |
-            cs install giter8
-            sudo mv /home/runner/.local/share/coursier/bin/g8 /usr/local/bin
-            cd /usr/local/bin
-            chmod +x g8
 
       - name: Extract branch name (Trigger - PR)
         if: github.event_name == 'pull_request'
