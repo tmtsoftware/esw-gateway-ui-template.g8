@@ -3,9 +3,9 @@
 Steps to release:
 
 1. Change `esw-ts` version in `package.json`
-2. Commit and push changes to `dev` branch
-3. Make sure `dev` workflow is green in actions tab in github repo
-4. Rebase dev branch with master branch
+2. Rebase dev branch with master branch
+3. Commit and push changes to `dev` branch
+4. Make sure `dev` workflow is green in actions tab in github repo
 5. Merge dev branch to master branch using PR
 6. Make sure workflow is green in actions tab in github repo for master branch
 7. Run ./release.sh `<VERSION>`script by providing version number argument
