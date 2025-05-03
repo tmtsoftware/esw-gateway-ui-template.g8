@@ -8,7 +8,7 @@ import { Main} from './components/Main'
 
 const basename = import.meta.env.PROD === 'production' ? `/${AppConfig.applicationName}` : ''
 
-const App = (): React.JSX.Element => {
+export const App = (): React.JSX.Element => {
   const { data: initialised, error } = useQuery(() => loadGlobalConfig().then(() => true))
   const locationService = LocationService()
 
