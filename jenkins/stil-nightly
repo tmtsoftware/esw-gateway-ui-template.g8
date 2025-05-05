@@ -17,7 +17,7 @@ pipeline {
         
         stage('Build UI app') {
             steps {
-                sh "cd /tmp/ui-app && npm install && npm run build && npm run test"
+                sh "cd /tmp/ui-app && npm install && npm run build && npm run test:jenkins"
             }
         }
     }
