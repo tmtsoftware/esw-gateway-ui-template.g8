@@ -16,7 +16,7 @@ export default {
           // Note: without this you'll run into https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201
           window.__vite_plugin_react_preamble_installed__ = true;
         </script>
-        <script type="module" src="\${testFramework}"></script>
+        <script type="module" src="${testFramework}"></script>
       </head>
     </html>
   `
